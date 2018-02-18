@@ -5,6 +5,7 @@
   "author": "Chris Black <chris@ckblack.org>",
   "description": "A bot to make Github issues",
   "dependencies": {
+    "coffee-script": "^1.12.7",
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.2",
     "hubot-google-images": "^0.2.7",
