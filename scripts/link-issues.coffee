@@ -22,4 +22,9 @@ module.exports = (robot) ->
   robot.hear /(\w+)?\#(\d+)/, (res) ->
     repoName = res.match[1] ||= "pecan"
     issueNum = res.match[2]
+
+    # Don't respond to other bots
+    if res.message.user in ["github", "Travis CI"]
+      return
+
     res.send "https://github.com/PecanProject/#{repoName}/issues/#{issueNum}"
