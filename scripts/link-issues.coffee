@@ -24,7 +24,7 @@ module.exports = (robot) ->
     issueNum = res.match[2]
 
     # Don't respond to other bots
-    if res.message.user in ["github", "Travis CI"]
+    if res.message.user.name in ["github", "Travis CI"]
       return
 
     res.send "https://github.com/PecanProject/#{repoName}/issues/#{issueNum}"
